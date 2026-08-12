@@ -4,62 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0066FF" />
-  <title>시놀 웰컴기프트 프로토타입</title>
+  <title>시놀 웰컴기프트 상세페이지 와이어프레임</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="prototype-note">
-    업체 협의용 프로토타입 · 실제 혜택/금액/서비스 범위/이미지는 각 업체 자료 확인 후 변경됩니다.
-  </div>
+  <div class="prototype-note">업체 협의용 상세페이지 와이어프레임 · 실제 이미지/운영조건/연락 방식은 제휴 확정 후 최종 반영됩니다.</div>
 
   <main class="app-shell">
-
     <!-- 01. 기프트 선택 -->
     <section class="screen is-active" data-screen="gift">
       <header class="app-header">
         <div class="brand">SINOR</div>
         <button class="icon-button" type="button" aria-label="닫기">×</button>
       </header>
-
       <div class="content gift-content">
         <p class="eyebrow">WELCOME GIFT</p>
         <h1>가입을 환영해요.<br />지금의 나에게 필요한 선물을 골라보세요.</h1>
-        <p class="lead">시놀 신규회원에게 드리는 0원 웰컴기프트예요.</p>
+        <p class="lead">시놀 신규회원에게 드리는 웰컴기프트예요.</p>
+
+        <div class="wireframe-guide">
+          <strong>업체 공유용 화면 안내</strong>
+          <p>아래 화면은 실제 사용자에게 보여줄 상세페이지 구성 예시입니다. 점선 영역은 각 서비스의 실제 사진·결과물 등으로 교체될 이미지 슬롯입니다.</p>
+        </div>
 
         <div class="gift-list">
           <button class="gift-card" type="button" data-open-detail="outfit">
-            <div class="gift-visual visual-style">
-              <div class="mock-photo male-style">
-                <span>STYLE</span>
-              </div>
+            <div class="gift-visual outfit-thumb">
+              <img src="./assets/outfit-cover.jpg" alt="아웃핏코드 스타일링 리포트 예시" />
             </div>
             <div class="gift-copy">
               <span class="category">스타일</span>
-              <strong>새로운 나를 발견하는 시간</strong>
-              <span>전문가와 함께 나에게 어울리는 스타일을 찾아보세요.</span>
+              <strong>나에게 어울리는 기준을 찾는 시간</strong>
+              <span>얼굴·체형을 분석하고 나만의 헤어·패션 방향을 제안받아보세요.</span>
             </div>
             <span class="chevron">›</span>
           </button>
 
           <button class="gift-card" type="button" data-open-detail="care">
-            <div class="gift-visual visual-care">
-              <div class="mock-photo massage">
-                <span>CARE</span>
+            <div class="gift-visual">
+              <div class="mock-photo health-check">
+                <span>대표 썸네일</span>
+                <small>인지·움직임 검사를<br />받는 시니어 이미지</small>
               </div>
             </div>
             <div class="gift-copy">
-              <span class="category">케어</span>
-              <strong>몸과 마음이 편안해지는 시간</strong>
-              <span>편안한 공간에서 쌓인 피로를 풀고 쉬어가세요.</span>
+              <span class="category">건강</span>
+              <strong>지금의 몸과 인지를 점검하는 시간</strong>
+              <span>인지기능과 움직임 기능을 약 2시간 동안 무료로 점검해보세요.</span>
             </div>
             <span class="chevron">›</span>
           </button>
 
           <button class="gift-card featured" type="button" data-open-detail="onyou">
             <div class="featured-badge">시놀 추천</div>
-            <div class="gift-visual visual-life">
+            <div class="gift-visual">
               <div class="mock-photo life">
-                <span>LIFE</span>
+                <span>대표 썸네일</span>
+                <small>부담 없는 상담·안내<br />분위기 이미지</small>
               </div>
             </div>
             <div class="gift-copy">
@@ -70,7 +71,6 @@
             <span class="chevron">›</span>
           </button>
         </div>
-
         <p class="micro-copy">웰컴기프트는 1개만 선택할 수 있어요.</p>
       </div>
     </section>
@@ -86,42 +86,91 @@
       <div class="detail-scroll">
         <section class="hero hero-outfit">
           <p class="eyebrow">시놀 신규회원 전용 · 아웃핏코드</p>
-          <h1>나답게 입는 방법을<br />전문가와 찾아보세요.</h1>
-          <p class="lead">지금보다 더 나다운 인상을 만드는 스타일링 경험을 선물해요.</p>
+          <h1>나에게 어울리는 스타일,<br />이제 분석으로 찾아보세요.</h1>
+          <p class="lead">간단한 설문과 사진을 바탕으로 얼굴과 체형을 분석하고, 나에게 어울리는 헤어·패션 방향을 담은 맞춤 스타일링 리포트를 온라인으로 받아볼 수 있어요.</p>
 
-          <div class="hero-visual hero-visual-style">
-            <div class="visual-copy">
-              <span>OUTFIT CODE</span>
-              <strong>Personal Styling</strong>
-            </div>
+          <div class="outfit-cover">
+            <img src="./assets/outfit-cover.jpg" alt="아웃핏코드 스타일링 퍼스널 리포트 표지 예시" />
           </div>
 
           <div class="benefit-card">
             <span>시놀 회원 전용 웰컴기프트</span>
-            <strong>스타일링 혜택 0원*</strong>
-            <p>* 정확한 프로그램명·정상가·무료 제공 범위는 업체 확인 후 반영</p>
+            <strong>정상가 100,000원 → 0원</strong>
+            <p>안면·체형 분석 기반 온라인 헤어·패션 컨설팅</p>
           </div>
         </section>
 
         <section class="section-block">
-          <p class="eyebrow">이런 경험이에요</p>
-          <h2>옷을 사는 것보다 먼저,<br />나에게 어울리는 기준을 알아가는 시간</h2>
+          <p class="eyebrow">무엇을 받나요?</p>
+          <h2>얼굴과 체형을 함께 보고<br />나에게 맞는 스타일 기준을 찾아요</h2>
+          <p class="section-description">시놀 회원을 위해 중장년층에 맞춰 새롭게 구성되는 온라인 스타일링 리포트예요.</p>
           <div class="feature-grid">
-            <article><span>01</span><strong>현재 스타일 파악</strong><p>평소 옷차림과 원하는 인상을 함께 살펴봐요.</p></article>
-            <article><span>02</span><strong>나에게 맞는 방향 제안</strong><p>체형·분위기·목적 등을 바탕으로 스타일을 제안받아요.</p></article>
-            <article><span>03</span><strong>실생활에 적용</strong><p>출근·모임·여행 등 일상에서 활용할 수 있는 기준을 얻어요.</p></article>
+            <article><span>01</span><strong>안면 분석</strong><p>얼굴의 비율과 특징을 분석해 어울리는 헤어스타일의 방향을 찾아요.</p></article>
+            <article><span>02</span><strong>체형 분석</strong><p>체형의 비율과 실루엣을 살펴보고 옷의 핏과 비율을 고르는 기준을 찾아요.</p></article>
+            <article><span>03</span><strong>헤어·패션 솔루션</strong><p>분석 결과를 바탕으로 일상에서 활용할 수 있는 헤어와 패션 방향을 제안해요.</p></article>
           </div>
-          <p class="footnote">※ 체형 분석, 퍼스널컬러, 쇼핑동행, 헤어·안경·신발 등 실제 포함 범위는 업체 자료 확인 후 확정됩니다.</p>
         </section>
 
         <section class="section-block soft-section">
-          <p class="eyebrow">확인할 내용</p>
-          <h2>이용 전 궁금할 만한 내용을<br />미리 안내할게요</h2>
+          <p class="eyebrow">리포트 미리보기</p>
+          <h2>어떤 정보를 받게 되는지<br />미리 확인해보세요</h2>
+          <p class="section-description">아래 이미지는 현재 아웃핏코드 리포트 구성 예시이며, 실제 시놀 회원용 리포트는 중장년층에 맞춰 별도로 구성될 예정입니다.</p>
+
+          <div class="report-preview-list">
+            <article class="report-preview-card">
+              <img src="./assets/outfit-face.jpg" alt="아웃핏코드 안면 분석 리포트 예시" />
+              <div><span>FACE ANALYSIS</span><strong>안면 분석</strong><p>얼굴 비율과 특징을 분석해 헤어스타일 방향을 확인해요.</p></div>
+            </article>
+            <article class="report-preview-card">
+              <img src="./assets/outfit-body.jpg" alt="아웃핏코드 체형 분석 리포트 예시" />
+              <div><span>BODY ANALYSIS</span><strong>체형 분석</strong><p>신체 비율과 실루엣을 분석해 옷을 고르는 기준을 확인해요.</p></div>
+            </article>
+            <article class="report-preview-card">
+              <img src="./assets/outfit-hair.jpg" alt="아웃핏코드 헤어 솔루션 리포트 예시" />
+              <div><span>HAIR SOLUTION</span><strong>헤어 솔루션</strong><p>얼굴형 분석 결과를 바탕으로 어울리는 헤어 방향을 제안해요.</p></div>
+            </article>
+            <article class="report-preview-card">
+              <img src="./assets/outfit-fashion.jpg" alt="아웃핏코드 패션 솔루션 리포트 예시" />
+              <div><span>FASHION SOLUTION</span><strong>패션 솔루션</strong><p>체형에 맞는 핏과 비율 등 패션 스타일링 방향을 제안해요.</p></div>
+            </article>
+          </div>
+          <p class="footnote">※ 표지와 이론 설명을 포함해 약 10페이지 내외의 리포트로 구성될 예정입니다.</p>
+        </section>
+
+        <section class="section-block">
+          <p class="eyebrow">이용 방식</p>
+          <h2>매장 방문 없이<br />온라인으로 받아볼 수 있어요</h2>
           <div class="check-list">
-            <article><span>대상</span><strong>남녀 모두 이용 가능한지 확인 후 반영</strong></article>
-            <article><span>진행 방식</span><strong>온라인 / 오프라인 / 소요시간 확인 후 반영</strong></article>
-            <article><span>선택 가능 범위</span><strong>원하는 목적·스타일 선택 가능 여부 확인 후 반영</strong></article>
-            <article><span>추가 구매</span><strong>의류 구매 필수 여부 및 추가 결제 여부 확인 후 반영</strong></article>
+            <article><span>프로그램</span><strong>안면·체형 분석 기반 온라인 헤어·패션 컨설팅</strong></article>
+            <article><span>진행 방식</span><strong>온라인</strong></article>
+            <article><span>예상 소요시간</span><strong>신청서 작성 약 10분 이내</strong></article>
+            <article><span>결과 전달</span><strong>신청 완료 후 약 1주 이내 이메일 발송</strong></article>
+            <article><span>정상가</span><strong>100,000원</strong></article>
+            <article><span>시놀 회원 혜택</span><strong class="primary-text">0원</strong></article>
+          </div>
+          <div class="notice-card">
+            <span class="notice-icon">i</span>
+            <p><strong>온라인 리포트 제공까지는 추가 비용이 발생하지 않아요.</strong><br />리포트를 받은 뒤 별도의 대면 컨설팅을 추가로 희망하는 경우에만 추가 비용이 발생할 수 있습니다.</p>
+          </div>
+        </section>
+
+        <section class="section-block soft-section">
+          <p class="eyebrow">신청 전 준비해주세요</p>
+          <h2>신청서 작성 전에<br />아래 정보와 사진을 준비해주세요</h2>
+          <p class="section-description">아웃핏코드 신청서에서 총 8가지 정보를 입력하게 됩니다.</p>
+          <div class="outfit-prepare-grid">
+            <article><span>01</span><strong>이름</strong></article>
+            <article><span>02</span><strong>성별</strong></article>
+            <article><span>03</span><strong>나이</strong></article>
+            <article><span>04</span><strong>키 · 몸무게</strong></article>
+            <article><span>05</span><strong>얼굴 정면 사진 1장</strong></article>
+            <article><span>06</span><strong>체형 정면 사진 1장</strong></article>
+            <article><span>07</span><strong>리포트 받을 이메일</strong></article>
+            <article><span>08</span><strong>연락 가능한 휴대폰 번호</strong></article>
+          </div>
+          <div class="outfit-photo-guide">
+            <span class="notice-icon">!</span>
+            <p><strong>사진 촬영 가이드를 꼭 확인해주세요.</strong><br />얼굴과 체형을 사진으로 분석하기 때문에 사진의 각도와 촬영 방식에 따라 분석이 어려울 수 있어요. 신청서에 안내된 촬영 가이드에 맞춰 사진을 준비해주세요.</p>
           </div>
         </section>
 
@@ -129,10 +178,10 @@
           <p class="eyebrow">이용 과정</p>
           <h2>신청하면 이렇게 진행돼요</h2>
           <div class="step-list">
-            <article class="step-card"><span>1</span><div><strong>웰컴기프트 신청</strong><p>시놀에서 아웃핏코드를 선택해요.</p></div></article>
-            <article class="step-card"><span>2</span><div><strong>정보 전달</strong><p>예약 및 안내에 필요한 최소 정보를 업체에 전달해요.</p></div></article>
-            <article class="step-card"><span>3</span><div><strong>예약 안내</strong><p>업체에서 예약 방법과 이용 조건을 안내해요.</p></div></article>
-            <article class="step-card"><span>4</span><div><strong>스타일링 이용</strong><p>예약한 일정에 맞춰 서비스를 이용해요.</p></div></article>
+            <article class="step-card"><span>1</span><div><strong>시놀에서 웰컴기프트 신청</strong><p>아웃핏코드 온라인 컨설팅 혜택을 선택해요.</p></div></article>
+            <article class="step-card"><span>2</span><div><strong>아웃핏코드 구글폼 작성</strong><p>이름·성별·나이·키·몸무게 등 리포트 제작에 필요한 정보를 입력해요.</p></div></article>
+            <article class="step-card"><span>3</span><div><strong>사진 2장 업로드</strong><p>촬영 가이드에 맞춰 얼굴 정면 사진과 체형 정면 사진을 각각 1장씩 업로드해요.</p></div></article>
+            <article class="step-card"><span>4</span><div><strong>맞춤 리포트 이메일 수령</strong><p>신청 완료 후 약 1주 이내 입력한 이메일로 스타일링 리포트가 발송돼요.</p></div></article>
           </div>
         </section>
 
@@ -140,24 +189,28 @@
           <p class="eyebrow">자주 묻는 질문</p>
           <h2>신청 전에 확인해보세요</h2>
           <div class="accordion">
-            <button class="accordion-item is-open" type="button"><span>옷을 꼭 구매해야 하나요?</span><b>−</b></button>
-            <div class="accordion-panel is-open">구매가 필수인지, 스타일링 이후 별도 구매 권유가 있는지 업체 확인 후 정확히 안내할 예정입니다.</div>
-            <button class="accordion-item" type="button"><span>남녀 모두 이용할 수 있나요?</span><b>＋</b></button>
-            <div class="accordion-panel">이용 대상과 연령·성별 제한 여부를 업체 확인 후 반영합니다.</div>
-            <button class="accordion-item" type="button"><span>어디까지 스타일링해주나요?</span><b>＋</b></button>
-            <div class="accordion-panel">의류, 체형, 컬러, 액세서리, 쇼핑동행 등 실제 프로그램에 포함되는 범위를 확인 후 안내합니다.</div>
+            <button class="accordion-item is-open" type="button"><span>직접 매장에 방문해야 하나요?</span><b>−</b></button>
+            <div class="accordion-panel is-open">아니요. 시놀 회원에게 제공되는 혜택은 온라인으로 진행되는 헤어·패션 컨설팅이에요.</div>
+            <button class="accordion-item" type="button"><span>정말 무료인가요?</span><b>＋</b></button>
+            <div class="accordion-panel">네. 온라인 스타일링 리포트는 시놀 회원에게 무료로 제공돼요. 리포트 수령 후 별도의 대면 컨설팅을 추가로 선택하는 경우에는 추가 비용이 발생할 수 있습니다.</div>
+            <button class="accordion-item" type="button"><span>무엇을 준비해야 하나요?</span><b>＋</b></button>
+            <div class="accordion-panel">이름, 성별, 나이, 키·몸무게, 얼굴 정면 사진 1장, 체형 정면 사진 1장, 이메일 주소, 휴대폰 번호가 필요해요.</div>
+            <button class="accordion-item" type="button"><span>리포트는 언제 받을 수 있나요?</span><b>＋</b></button>
+            <div class="accordion-panel">구글폼 입력과 사진 업로드를 완료한 뒤 약 1주 이내 입력한 이메일 주소로 발송될 예정이에요.</div>
+            <button class="accordion-item" type="button"><span>기존 아웃핏코드 서비스와 같은 프로그램인가요?</span><b>＋</b></button>
+            <div class="accordion-panel">기존 프로그램을 그대로 제공하는 방식이 아니라, 시놀 회원을 위해 중장년층에 맞춘 간소화 리포트를 새롭게 구성하는 방향으로 준비 중이에요.</div>
           </div>
         </section>
         <div class="detail-bottom-space"></div>
       </div>
 
       <div class="sticky-action">
-        <p>현재 화면은 구성 예시이며 실제 서비스 범위는 업체 확인 후 확정됩니다.</p>
+        <p>시놀에서 신청한 뒤 아웃핏코드 구글폼에서 분석 정보를 입력해요.</p>
         <button class="primary-button" type="button" data-general-apply="outfit">이 웰컴기프트 받기</button>
       </div>
     </section>
 
-    <!-- 02-B. OO케어 상세 -->
+    <!-- 02-B. 대웅 케어허브 상세 -->
     <section class="screen" data-screen="detail-care">
       <header class="app-header">
         <button class="icon-button back-button" type="button" data-back="gift">‹</button>
@@ -167,78 +220,123 @@
 
       <div class="detail-scroll">
         <section class="hero hero-care">
-          <p class="eyebrow">시놀 신규회원 전용 · OO케어</p>
-          <h1>바쁘게 보낸 몸에<br />편안한 시간을 선물하세요.</h1>
-          <p class="lead">편안한 공간에서 몸의 긴장을 풀고 충분히 쉬어가는 케어 경험이에요.</p>
+          <p class="eyebrow" style="color:#157A5A">시놀 신규회원 전용 · 대웅 케어허브</p>
+          <h1>지금의 기억력과 움직임을<br />한 번에 점검해보세요.</h1>
+          <p class="lead">인지기능 검사와 움직임 기능검사를 약 2시간 동안 무료로 경험하는 건강 점검 웰컴기프트예요.</p>
 
-          <div class="hero-visual hero-visual-care">
-            <div class="visual-copy">
-              <span>BODY CARE</span>
-              <strong>Relax & Recharge</strong>
-            </div>
+          <div class="image-request hero-image-request green">
+            <div class="image-request-top"><span>업체 제공 이미지 01</span><b>HERO</b></div>
+            <strong>실제 검사 진행 이미지</strong>
+            <p>시니어 이용자가 디지털 인지검사 또는 움직임 측정 장비를 이용하는 모습<br />마사지·가운 이미지가 아니라 ‘과학적으로 현재 상태를 점검한다’는 인상이 보이도록</p>
+            <div class="image-meta"><span>권장 비율 4:3 또는 3:2</span><span>인지/움직임 중 대표 1장</span></div>
           </div>
 
-          <div class="benefit-card">
+          <div class="benefit-card care">
             <span>시놀 회원 전용 웰컴기프트</span>
-            <strong>케어 프로그램 0원*</strong>
-            <p>* 정확한 관리 종류·시간·정상가·무료 범위는 업체 확인 후 반영</p>
+            <strong>인지기능 + 움직임 기능 검사 0원</strong>
+            <div class="benefit-split">
+              <div><span>예상 소요시간</span><b>약 2시간</b></div>
+              <div><span>이용 장소</span><b>하남 케어허브</b></div>
+            </div>
           </div>
         </section>
 
         <section class="section-block">
-          <p class="eyebrow">이런 경험이에요</p>
-          <h2>잠시 멈추고,<br />편안하게 관리받는 시간</h2>
-          <div class="feature-grid">
-            <article><span>01</span><strong>예약 후 방문</strong><p>원하는 일정에 맞춰 예약하고 방문해요.</p></article>
-            <article><span>02</span><strong>편안한 케어</strong><p>제공되는 가운 등으로 준비 후 편하게 관리받아요.</p></article>
-            <article><span>03</span><strong>추가 선택은 직접</strong><p>무료 제공 범위 밖의 추가 서비스는 조건을 확인 후 선택해요.</p></article>
+          <p class="eyebrow" style="color:#157A5A">두 가지를 함께 점검해요</p>
+          <h2>보이지 않던 변화를<br />데이터로 확인하는 시간</h2>
+          <div class="feature-grid green">
+            <article><span>01 · 인지기능</span><strong>기억력·집중력·실행기능 등을 점검</strong><p>디지털 검사를 활용해 현재 인지 기능을 객관적으로 살펴봐요.</p></article>
+            <article><span>02 · 움직임 기능</span><strong>보행·균형·근력 등을 점검</strong><p>보행 안정성과 균형, 근력, 관절 가동범위 등 일상 움직임과 관련된 기능을 확인해요.</p></article>
+            <article><span>03 · 현재 상태 이해</span><strong>막연한 느낌보다 수치와 결과로</strong><p>지금 내 몸과 인지 상태를 한 번 점검해보고 이후 건강관리의 기준을 만들어보세요.</p></article>
+          </div>
+        </section>
+
+        <section class="section-block soft-green">
+          <p class="eyebrow" style="color:#157A5A">인지기능 검사</p>
+          <h2>기억력만 보는 검사가 아니에요</h2>
+          <p class="section-description">케어허브 인지센터 ‘실비아 캠퍼스’는 기억력, 집중력, 실행기능 등 인지 전반을 디지털 방식으로 점검하고 관리하는 프로그램을 운영해요.</p>
+          <div class="image-request green">
+            <div class="image-request-top"><span>업체 제공 이미지 02</span><b>COGNITIVE</b></div>
+            <strong>실비아 캠퍼스 검사 장면</strong>
+            <p>실비아 스테이션 등 실제 디지털 인지 평가 장면 또는 검사 화면<br />어떤 방식으로 검사를 받는지 직관적으로 알 수 있는 이미지</p>
+            <div class="image-meta"><span>실제 장비/화면 우선</span><span>검사 장면 1~2장</span></div>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <p class="eyebrow" style="color:#157A5A">움직임 기능 검사</p>
+          <h2>걷기와 균형, 근력을<br />정밀하게 살펴봐요</h2>
+          <p class="section-description">힐리언스 코어센터는 보행 안정성, 균형, 근력을 중심으로 움직임 기능을 평가하고 AI 기반 장비로 근력과 관절 가동범위를 측정해요.</p>
+          <div class="image-request green">
+            <div class="image-request-top"><span>업체 제공 이미지 03</span><b>MOBILITY</b></div>
+            <strong>움직임 측정 장면</strong>
+            <p>론픽(RONFIC), 에버엑스(EverEx) 등 실제 측정 장비를 이용하는 모습<br />걷기·근력·관절 움직임을 검사한다는 점이 보이는 사진</p>
+            <div class="image-meta"><span>전신이 보이는 사진 권장</span><span>장비명 확인 가능한 원본</span></div>
           </div>
         </section>
 
         <section class="section-block soft-section">
-          <p class="eyebrow">꼭 확인할 내용</p>
-          <h2>무료 혜택과 추가 결제를<br />명확하게 구분해 안내할게요</h2>
+          <p class="eyebrow" style="color:#157A5A">이용 전 알아두세요</p>
+          <h2>레지던스 입소와는<br />별개의 검사 혜택이에요</h2>
           <div class="check-list">
-            <article><span>무료 프로그램</span><strong>관리 종류·부위·시간 확인 후 반영</strong></article>
-            <article><span>이용 지점</span><strong>가능 지점과 예약 시간 확인 후 반영</strong></article>
-            <article><span>추가 요금</span><strong>현장에서 필수로 발생하는 추가 비용 여부 확인 후 반영</strong></article>
-            <article><span>추가 권유</span><strong>회원권·패키지·추가 시술 권유 여부 확인 후 반영</strong></article>
+            <article><span>혜택 내용</span><strong>인지기능 검사 + 움직임 기능검사</strong></article>
+            <article><span>소요시간</span><strong>약 2시간</strong></article>
+            <article><span>이용 장소</span><strong>경기도 하남시 케어허브</strong></article>
+            <article><span>연령</span><strong>인지센터·움직임센터 프로그램은 연령과 관계없이 이용 가능</strong></article>
           </div>
-          <div class="notice-card">
+          <div class="notice-card green">
             <span class="notice-icon">✓</span>
-            <p><strong>0원 혜택을 받기 위해 별도 상품 구매가 필요한지 반드시 확인해 안내합니다.</strong><br />
-              추가 서비스가 있다면 필수인지 선택인지도 구분해 보여줄 예정이에요.</p>
+            <p><strong>케어허브의 레지던스는 만 60세 이상이지만, 2층 인지센터와 움직임센터 프로그램은 연령 제한 없이 이용할 수 있어요.</strong><br />따라서 웰컴기프트 상세에서는 ‘시니어 레지던스 입소 혜택’으로 오해되지 않도록 분리해서 보여주는 게 좋아요.</p>
           </div>
         </section>
 
         <section class="section-block">
-          <p class="eyebrow">이용 과정</p>
+          <p class="eyebrow" style="color:#157A5A">이용 과정</p>
           <h2>신청하면 이렇게 진행돼요</h2>
-          <div class="step-list">
-            <article class="step-card"><span>1</span><div><strong>웰컴기프트 신청</strong><p>시놀에서 OO케어를 선택해요.</p></div></article>
-            <article class="step-card"><span>2</span><div><strong>정보 전달</strong><p>예약 안내에 필요한 최소 정보를 업체에 전달해요.</p></div></article>
-            <article class="step-card"><span>3</span><div><strong>예약</strong><p>이용 가능한 지점과 시간을 확인해 예약해요.</p></div></article>
-            <article class="step-card"><span>4</span><div><strong>방문 및 케어 이용</strong><p>현장에서 무료 제공 범위를 확인하고 서비스를 이용해요.</p></div></article>
+          <div class="step-list green">
+            <article class="step-card"><span>1</span><div><strong>웰컴기프트 신청</strong><p>시놀에서 대웅 케어허브 건강검사 혜택을 선택해요.</p></div></article>
+            <article class="step-card"><span>2</span><div><strong>예약 안내</strong><p>케어허브에서 방문 가능한 일정과 준비사항을 안내해요.</p></div></article>
+            <article class="step-card"><span>3</span><div><strong>하남 케어허브 방문</strong><p>예약한 일정에 맞춰 케어허브 인지센터·움직임센터를 방문해요.</p></div></article>
+            <article class="step-card"><span>4</span><div><strong>약 2시간 검사</strong><p>인지기능과 움직임 기능을 차례로 점검해요.</p></div></article>
           </div>
         </section>
 
         <section class="section-block">
-          <p class="eyebrow">자주 묻는 질문</p>
+          <p class="eyebrow" style="color:#157A5A">공간도 미리 보여주세요</p>
+          <h2>병원처럼 무겁지 않고,<br />전문성은 느껴지게</h2>
+          <div class="image-pair">
+            <div class="image-request compact green">
+              <div class="image-request-top"><span>업체 이미지 04</span><b>SPACE</b></div>
+              <strong>인지센터</strong>
+              <p>실비아 캠퍼스 공간/장비</p>
+            </div>
+            <div class="image-request compact green">
+              <div class="image-request-top"><span>업체 이미지 05</span><b>SPACE</b></div>
+              <strong>움직임센터</strong>
+              <p>힐리언스 코어센터 공간/장비</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <p class="eyebrow" style="color:#157A5A">자주 묻는 질문</p>
           <h2>신청 전에 확인해보세요</h2>
           <div class="accordion">
-            <button class="accordion-item is-open" type="button"><span>현장에서 추가 비용이 생기나요?</span><b>−</b></button>
-            <div class="accordion-panel is-open">무료 혜택 이용에 필수로 추가되는 비용이 있는지 업체 확인 후 정확히 안내할 예정입니다.</div>
-            <button class="accordion-item" type="button"><span>추가 시술이나 회원권 구매가 필수인가요?</span><b>＋</b></button>
-            <div class="accordion-panel">추가 프로그램 안내 여부와 구매가 선택인지 필수인지 업체 확인 후 안내합니다.</div>
-            <button class="accordion-item" type="button"><span>어떤 관리가 포함되나요?</span><b>＋</b></button>
-            <div class="accordion-panel">관리 종류, 부위, 소요시간, 이용 지점 등 실제 무료 제공 범위를 확인 후 반영합니다.</div>
+            <button class="accordion-item is-open" type="button"><span>마사지나 바디케어를 받는 혜택인가요?</span><b>−</b></button>
+            <div class="accordion-panel is-open">아니요. 이번 웰컴기프트는 인지기능과 움직임 기능을 점검하는 검사 혜택이에요.</div>
+            <button class="accordion-item" type="button"><span>60세 이상만 이용할 수 있나요?</span><b>＋</b></button>
+            <div class="accordion-panel">케어허브 레지던스는 만 60세 이상이지만, 2층 인지센터와 움직임센터 프로그램은 연령과 관계없이 이용할 수 있어요.</div>
+            <button class="accordion-item" type="button"><span>어디에서 이용하나요?</span><b>＋</b></button>
+            <div class="accordion-panel">하남 케어허브에서 이용하는 방문형 검사 혜택으로 구성합니다. 상세 주소와 방문 안내는 최종 제휴 운영안에 맞춰 노출하면 됩니다.</div>
+            <button class="accordion-item" type="button"><span>검사에는 얼마나 걸리나요?</span><b>＋</b></button>
+            <div class="accordion-panel">인지기능 검사와 움직임 기능검사를 포함해 약 2시간을 예상해 안내하는 구성입니다.</div>
           </div>
         </section>
         <div class="detail-bottom-space"></div>
       </div>
 
       <div class="sticky-action">
-        <p>현재 화면은 구성 예시이며 실제 서비스 범위는 업체 확인 후 확정됩니다.</p>
+        <p>검사 세부 항목·예약 가능 시간·결과 안내 범위는 제휴 운영안 확정 후 반영됩니다.</p>
         <button class="primary-button" type="button" data-general-apply="care">이 웰컴기프트 받기</button>
       </div>
     </section>
@@ -250,23 +348,25 @@
         <strong class="header-title">웰컴기프트</strong>
         <button class="icon-button" type="button">×</button>
       </header>
-
       <div class="detail-scroll">
         <section class="hero">
           <p class="eyebrow">시놀 신규회원 전용 · 온유상조</p>
           <h1>필요한 순간을 위해<br />미리 알아두는 선택</h1>
           <p class="lead">온유상조를 부담 없이 알아볼 수 있는 웰컴기프트예요.</p>
-
+          <div class="image-request hero-image-request">
+            <div class="image-request-top"><span>업체 제공 이미지 01</span><b>HERO</b></div>
+            <strong>온유상조 대표 이미지</strong>
+            <p>장례식·영정 등 무거운 장면보다는 상담·안내·준비의 이미지를 전달할 수 있는 사진<br />중장년 고객이 부담 없이 서비스를 알아보는 분위기</p>
+            <div class="image-meta"><span>권장 비율 4:3 또는 3:2</span><span>가로 1600px 이상</span></div>
+          </div>
           <div class="benefit-card">
             <span>시놀 회원 전용 혜택</span>
             <strong>가입비 10만 원 → 0원</strong>
-            <p>※ 금액 및 정확한 혜택 범위는 업체 확인 후 최종 반영</p>
+            <p>※ 금액 및 정확한 혜택 범위는 업체 최종 확인 후 반영</p>
           </div>
-
           <div class="notice-card">
             <span class="notice-icon">✓</span>
-            <p><strong>이 웰컴기프트를 선택해도 바로 가입되지 않아요.</strong><br />
-              안내 지류를 받은 뒤 실제 가입 여부는 직접 결정할 수 있습니다.</p>
+            <p><strong>이 웰컴기프트를 선택해도 바로 가입되지 않아요.</strong><br />안내 지류를 받은 뒤 실제 가입 여부는 직접 결정할 수 있습니다.</p>
           </div>
         </section>
 
@@ -278,6 +378,12 @@
             <article class="step-card"><span>2</span><div><strong>필요한 정보 전달</strong><p>지류 발송에 필요한 정보를 온유상조에 전달해요.</p></div></article>
             <article class="step-card"><span>3</span><div><strong>안내 지류 수령</strong><p>온유상조에서 가입 혜택이 담긴 지류를 보내드려요.</p></div></article>
             <article class="step-card"><span>4</span><div><strong>가입 여부 직접 결정</strong><p>내용을 확인한 뒤 필요할 때 가입 여부를 결정해요.</p></div></article>
+          </div>
+          <div class="image-request">
+            <div class="image-request-top"><span>업체 제공 이미지 02</span><b>GIFT</b></div>
+            <strong>실제 가입 지류 이용권 이미지</strong>
+            <p>시놀 회원에게 실제 발송되는 지류의 앞·뒤면 또는 패키지 사진<br />쿠폰번호·개인정보 등 민감정보는 가린 샘플 이미지 가능</p>
+            <div class="image-meta"><span>정면 이미지 우선</span><span>앞면·뒷면 모두</span></div>
           </div>
         </section>
 
@@ -317,6 +423,24 @@
         </section>
 
         <section class="section-block">
+          <p class="eyebrow">실제 서비스 이미지</p>
+          <h2>필요한 순간 어떤 도움을 받는지<br />이미지로도 이해할 수 있게</h2>
+          <div class="image-pair">
+            <div class="image-request compact">
+              <div class="image-request-top"><span>업체 이미지 03</span><b>PEOPLE</b></div>
+              <strong>상담·장례지도사</strong>
+              <p>고객을 안내하거나 상담하는 실제 직원 이미지</p>
+            </div>
+            <div class="image-request compact">
+              <div class="image-request-top"><span>업체 이미지 04</span><b>SERVICE</b></div>
+              <strong>서비스 제공 장면</strong>
+              <p>과도하게 무겁지 않은 실제 지원 장면</p>
+            </div>
+          </div>
+          <p class="footnote">※ 장례식장·영정·관 등 직접적이고 무거운 이미지는 메인 노출보다 서비스 이해에 꼭 필요한 경우에만 검토합니다.</p>
+        </section>
+
+        <section class="section-block">
           <p class="eyebrow">자주 묻는 질문</p>
           <h2>궁금한 점을 확인해보세요</h2>
           <div class="accordion">
@@ -330,7 +454,6 @@
         </section>
         <div class="detail-bottom-space"></div>
       </div>
-
       <div class="sticky-action">
         <p>신청 과정에서 지류 수령 정보와 간단한 질문을 확인해요.</p>
         <button class="primary-button" type="button" data-next="apply-onyou-1">이 웰컴기프트 받기</button>
@@ -344,61 +467,33 @@
         <strong class="header-title">웰컴기프트 신청</strong>
         <span class="header-step">1/1</span>
       </header>
-
       <div class="content form-content">
         <div class="progress"><span style="width:100%"></span></div>
         <p class="eyebrow" id="general-company">제휴사</p>
         <h1 id="general-form-title">안내받을 정보를<br />확인해주세요.</h1>
-        <p class="lead" id="general-form-lead">예약 및 이용 안내에 필요한 최소 정보를 전달합니다.</p>
-
+        <p class="lead" id="general-form-lead">이용 안내에 필요한 최소 정보를 전달합니다.</p>
         <form id="general-form" class="form-stack">
-          <label>
-            <span>이름</span>
-            <input type="text" id="general-name" value="박희수" required />
-          </label>
-          <label>
-            <span>연락처</span>
-            <input type="tel" id="general-phone" value="010-1234-5678" required />
-          </label>
-
+          <label><span>이름</span><input type="text" id="general-name" placeholder="이름을 입력해주세요" required /></label>
+          <label><span>연락처</span><input type="tel" id="general-phone" placeholder="010-0000-0000" required /></label>
           <div class="conditional-field" data-for="care">
-            <label>
-              <span>희망 지역 / 지점</span>
-              <input type="text" id="care-location" placeholder="예: 여의도 / 강남 / 업체 안내 후 선택" />
-            </label>
+            <label><span>희망 방문 일정</span><input type="text" id="care-date" placeholder="예: 평일 오후 / 업체 안내 후 선택" /></label>
           </div>
-
           <div class="conditional-field" data-for="outfit">
-            <label>
-              <span>스타일링 목적</span>
-              <select id="outfit-purpose">
-                <option value="">선택해주세요</option>
-                <option>일상 스타일</option>
-                <option>모임 / 데이트</option>
-                <option>출근 / 비즈니스</option>
-                <option>전체적인 이미지 변화</option>
-              </select>
-            </label>
+            <div class="outfit-next-guide">
+              <strong>다음 단계에서 아웃핏코드 신청서를 작성해요.</strong>
+              <p>얼굴·체형 분석에 필요한 상세정보와 사진은 시놀 신청 완료 후 아웃핏코드 구글폼에서 직접 입력합니다.</p>
+            </div>
           </div>
         </form>
-
         <section class="consent-card">
           <label class="consent-all">
             <input type="checkbox" id="general-consent" required />
-            <span><strong>[필수] 개인정보 제3자 제공에 동의합니다.</strong><br />
-              웰컴기프트 이용 안내를 위해 이름, 연락처 및 신청 정보가 해당 제휴사에 전달됩니다.</span>
+            <span><strong>[필수] 개인정보 제3자 제공에 동의합니다.</strong><br />웰컴기프트 이용 안내를 위해 이름, 연락처 및 신청 정보가 해당 제휴사에 전달됩니다.</span>
           </label>
         </section>
-
-        <div class="inline-notice">
-          <span>i</span>
-          <p id="general-notice">정확한 제공 항목과 보유기간은 업체 협의 및 법무 검토 후 최종 반영됩니다.</p>
-        </div>
+        <div class="inline-notice"><span>i</span><p id="general-notice">정확한 제공 항목과 보유기간은 업체 협의 및 법무 검토 후 최종 반영됩니다.</p></div>
       </div>
-
-      <div class="sticky-action">
-        <button class="primary-button" type="button" id="general-submit">웰컴기프트 신청하기</button>
-      </div>
+      <div class="sticky-action"><button class="primary-button" type="button" id="general-submit">웰컴기프트 신청하기</button></div>
     </section>
 
     <!-- 03-1. 온유 신청 -->
@@ -408,29 +503,20 @@
         <strong class="header-title">웰컴기프트 신청</strong>
         <span class="header-step">1/2</span>
       </header>
-
       <div class="content form-content">
         <div class="progress"><span style="width:50%"></span></div>
         <p class="eyebrow">배송 정보</p>
         <h1>안내 지류를<br />어디로 보내드릴까요?</h1>
         <p class="lead">지류 발송에 필요한 정보를 확인해주세요.</p>
-
         <form id="delivery-form" class="form-stack">
-          <label><span>받는 분</span><input type="text" id="name" value="박희수" required /></label>
-          <label><span>연락처</span><input type="tel" id="phone" value="010-1234-5678" required /></label>
-          <label><span>주소</span><input type="text" id="address" value="서울 영등포구 여의도동 00로 00" required /></label>
+          <label><span>받는 분</span><input type="text" id="name" placeholder="이름을 입력해주세요" required /></label>
+          <label><span>연락처</span><input type="tel" id="phone" placeholder="010-0000-0000" required /></label>
+          <label><span>주소</span><input type="text" id="address" placeholder="주소를 입력해주세요" required /></label>
           <label><span>상세주소</span><input type="text" id="address2" placeholder="상세주소를 입력해주세요" /></label>
         </form>
-
-        <div class="inline-notice">
-          <span>i</span>
-          <p>입력한 정보는 웰컴기프트 발송을 위해 온유상조에 전달됩니다. <strong>정보 전달만으로 가입되지는 않습니다.</strong></p>
-        </div>
+        <div class="inline-notice"><span>i</span><p>입력한 정보는 웰컴기프트 발송을 위해 온유상조에 전달됩니다. <strong>정보 전달만으로 가입되지는 않습니다.</strong></p></div>
       </div>
-
-      <div class="sticky-action">
-        <button class="primary-button" type="button" id="to-survey">다음</button>
-      </div>
+      <div class="sticky-action"><button class="primary-button" type="button" id="to-survey">다음</button></div>
     </section>
 
     <!-- 03-2. 온유 설문 -->
@@ -440,39 +526,33 @@
         <strong class="header-title">웰컴기프트 신청</strong>
         <span class="header-step">2/2</span>
       </header>
-
       <div class="content survey-content">
         <div class="progress"><span style="width:100%"></span></div>
         <p class="eyebrow">간단한 질문</p>
         <h1>혜택을 더 잘 안내하기 위해<br />몇 가지만 알려주세요.</h1>
         <p class="lead">각 문항에서 가장 가까운 답변 하나를 선택해주세요.</p>
-
         <form id="survey-form" class="survey-form">
           <fieldset class="question-card">
             <legend><span>Q1</span> 상조를 알아볼 때 가장 궁금한 것은 무엇인가요?</legend>
             <label class="choice"><input type="radio" name="q1" value="process" required /><span>갑작스러운 상황에서 무엇부터 해야 하는지</span></label>
             <label class="choice"><input type="radio" name="q1" value="cost" /><span>실제로 어느 정도 비용이 드는지</span></label>
           </fieldset>
-
           <fieldset class="question-card important-question">
             <div class="question-tag">업체 주요 확인 문항</div>
             <legend><span>Q2</span> 현재 상조를 알아보시는 이유와 가까운 것은 무엇인가요?</legend>
             <label class="choice"><input type="radio" name="q2" value="prepare" required /><span>필요할 때를 대비해 미리 알아두고 싶어요</span></label>
             <label class="choice"><input type="radio" name="q2" value="urgent" /><span>가족 상황으로 가까운 시일 내 준비가 필요해요</span></label>
           </fieldset>
-
           <fieldset class="question-card">
             <legend><span>Q3</span> 상조를 미리 알아볼 때 가장 부담되는 점은 무엇인가요?</legend>
             <label class="choice"><input type="radio" name="q3" value="delay" required /><span>지금 당장 필요하지 않아 미루게 돼요</span></label>
             <label class="choice"><input type="radio" name="q3" value="monthly" /><span>계속 비용을 내야 할까 봐 부담돼요</span></label>
           </fieldset>
-
           <fieldset class="question-card">
             <legend><span>Q4</span> 월 납입금 없이 필요할 때 이용하는 방식에 대해 어떻게 생각하시나요?</legend>
             <label class="choice"><input type="radio" name="q4" value="helpful" required /><span>미리 알아두면 도움이 될 것 같아요</span></label>
             <label class="choice"><input type="radio" name="q4" value="more-info" /><span>실제 이용 조건을 더 확인해보고 싶어요</span></label>
           </fieldset>
-
           <section class="consent-card">
             <label class="consent-all">
               <input type="checkbox" id="consent" required />
@@ -480,56 +560,33 @@
             </label>
             <button type="button" class="text-button" id="consent-detail">자세히 보기</button>
           </section>
-
-          <div class="final-reminder">
-            <strong>신청 전 꼭 확인해주세요.</strong>
-            <p>웰컴기프트 신청은 온유상조 가입이 아닙니다. 지류를 받은 후 실제 가입 여부는 직접 결정할 수 있어요.</p>
-          </div>
+          <div class="final-reminder"><strong>신청 전 꼭 확인해주세요.</strong><p>웰컴기프트 신청은 온유상조 가입이 아닙니다. 지류를 받은 후 실제 가입 여부는 직접 결정할 수 있어요.</p></div>
         </form>
       </div>
-
-      <div class="sticky-action">
-        <button class="primary-button" type="button" id="submit-onyou">웰컴기프트 신청하기</button>
-      </div>
+      <div class="sticky-action"><button class="primary-button" type="button" id="submit-onyou">웰컴기프트 신청하기</button></div>
     </section>
 
     <!-- 완료 -->
     <section class="screen" data-screen="complete">
-      <header class="app-header">
-        <div class="brand">SINOR</div>
-        <button class="icon-button" type="button">×</button>
-      </header>
-
+      <header class="app-header"><div class="brand">SINOR</div><button class="icon-button" type="button">×</button></header>
       <div class="content complete-content">
         <div class="complete-icon">✓</div>
         <p class="eyebrow">신청 완료</p>
         <h1 id="complete-title">웰컴기프트 신청이<br />완료됐어요.</h1>
         <p class="lead" id="complete-lead">제휴사에서 이용 방법을 안내드릴 예정이에요.</p>
-
-        <div class="complete-notice" id="complete-notice">
-          <strong>신청 내용을 확인해주세요.</strong>
-          <p>실제 이용 조건과 일정은 제휴사 안내를 통해 확정됩니다.</p>
-        </div>
-
-        <section class="next-section">
-          <h2>이제 이렇게 진행돼요</h2>
-          <div class="mini-flow" id="complete-flow"></div>
-        </section>
-
+        <div class="complete-notice" id="complete-notice"><strong>신청 내용을 확인해주세요.</strong><p>실제 이용 조건과 일정은 제휴사 안내를 통해 확정됩니다.</p></div>
+        <section class="next-section"><h2>이제 이렇게 진행돼요</h2><div class="mini-flow" id="complete-flow"></div></section>
+        <a class="primary-button outfit-form-button" id="outfit-form-link" href="#" target="_blank" rel="noopener noreferrer" hidden>아웃핏코드 신청서 작성하기</a>
         <button class="secondary-button" type="button" id="restart">다른 웰컴기프트 보기</button>
       </div>
     </section>
-
   </main>
 
   <div class="modal" id="consent-modal" aria-hidden="true">
     <div class="modal-backdrop" data-close-modal></div>
     <div class="modal-sheet">
       <div class="modal-handle"></div>
-      <div class="modal-title-row">
-        <h2>개인정보 제3자 제공 안내</h2>
-        <button class="icon-button" type="button" data-close-modal>×</button>
-      </div>
+      <div class="modal-title-row"><h2>개인정보 제3자 제공 안내</h2><button class="icon-button" type="button" data-close-modal>×</button></div>
       <dl>
         <div><dt>제공받는 자</dt><dd>온유상조(운영사명 최종 확인 후 반영)</dd></div>
         <div><dt>제공 목적</dt><dd>웰컴기프트 지류 발송 및 제휴 서비스 안내</dd></div>
@@ -540,7 +597,6 @@
       <button class="primary-button" type="button" data-close-modal>확인</button>
     </div>
   </div>
-
   <div class="toast" id="toast"></div>
   <script src="./script.js"></script>
 </body>
