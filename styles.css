@@ -20,14 +20,13 @@
   --green100:#DFF3EA;
   --green700:#157A5A;
 
-  --shadow:
-    0 20px 60px rgba(25,43,74,.14);
+  --shadow:0 20px 60px rgba(25,43,74,.14);
 }
 
 
-/* =====================================================
-  BASE
-===================================================== */
+/* ==============================
+   기본
+============================== */
 
 *{
   box-sizing:border-box;
@@ -66,41 +65,16 @@ img{
   max-width:100%;
 }
 
-h1,
-h2,
-p{
-  word-break:keep-all;
-}
-
-h1{
-  margin:0;
-  font-size:29px;
-  line-height:1.32;
-  letter-spacing:-1.15px;
-}
-
-h2{
-  margin:0;
-  font-size:23px;
-  line-height:1.36;
-  letter-spacing:-.8px;
-}
-
-
-/* =====================================================
-  APP
-===================================================== */
-
 .prototype-note{
   max-width:430px;
   margin:24px auto 0;
-  padding:9px 12px;
-  border-radius:14px 14px 0 0;
   background:#111827;
   color:#fff;
+  padding:9px 12px;
   text-align:center;
   font-size:11px;
   line-height:1.5;
+  border-radius:14px 14px 0 0;
 }
 
 .app-shell{
@@ -108,9 +82,9 @@ h2{
   width:min(100%,430px);
   min-height:820px;
   margin:0 auto 56px;
-  overflow:hidden;
   background:#fff;
   box-shadow:var(--shadow);
+  overflow:hidden;
 }
 
 .screen{
@@ -129,7 +103,6 @@ h2{
     opacity:0;
     transform:translateX(8px);
   }
-
   to{
     opacity:1;
     transform:translateX(0);
@@ -137,26 +110,22 @@ h2{
 }
 
 
-/* =====================================================
-  HEADER
-===================================================== */
+/* ==============================
+   헤더
+============================== */
 
 .app-header{
   position:sticky;
   top:0;
   z-index:20;
-
   height:58px;
   padding:0 18px;
-
   display:grid;
   grid-template-columns:44px 1fr 44px;
   align-items:center;
-
-  border-bottom:1px solid var(--line);
-
   background:rgba(255,255,255,.96);
   backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
 }
 
 .brand{
@@ -182,16 +151,12 @@ h2{
 .icon-button{
   width:40px;
   height:40px;
-  padding:0;
-
   border:0;
-  border-radius:50%;
-
   background:transparent;
   color:var(--text700);
-
   font-size:25px;
   line-height:1;
+  border-radius:50%;
 }
 
 .icon-button:hover{
@@ -204,9 +169,9 @@ h2{
 }
 
 
-/* =====================================================
-  TYPOGRAPHY
-===================================================== */
+/* ==============================
+   공통 텍스트
+============================== */
 
 .content{
   padding:32px 20px 110px;
@@ -218,37 +183,70 @@ h2{
 
 .eyebrow{
   margin:0 0 10px;
-
   color:var(--primary);
-
   font-size:12px;
   line-height:1.2;
   font-weight:800;
   letter-spacing:.02em;
 }
 
+h1,
+h2,
+p{
+  word-break:keep-all;
+}
+
+h1{
+  margin:0;
+  font-size:29px;
+  line-height:1.32;
+  letter-spacing:-1.15px;
+}
+
+h2{
+  margin:0;
+  font-size:23px;
+  line-height:1.36;
+  letter-spacing:-.8px;
+}
+
 .lead{
   margin:12px 0 0;
-
   color:var(--text600);
-
   font-size:15px;
   line-height:1.65;
 }
 
-.section-description{
-  margin:10px 0 0;
 
-  color:var(--text600);
+/* ==============================
+   와이어프레임 안내
+============================== */
 
-  font-size:14px;
-  line-height:1.7;
+.wireframe-guide{
+  margin-top:18px;
+  padding:14px 15px;
+  border:1px dashed #9CBDF7;
+  border-radius:16px;
+  background:#F8FBFF;
+}
+
+.wireframe-guide strong{
+  display:block;
+  color:#0057D9;
+  font-size:12px;
+}
+
+.wireframe-guide p{
+  margin:5px 0 0;
+  color:#5E6670;
+  font-size:11.5px;
+  line-height:1.6;
 }
 
 
-/* =====================================================
-  GIFT LIST
-===================================================== */
+/* ==============================
+   웰컴기프트 목록
+============================== */
 
 .gift-list{
   display:grid;
@@ -258,29 +256,22 @@ h2{
 
 .gift-card{
   position:relative;
-
-  width:100%;
-  padding:12px;
-
   display:grid;
   grid-template-columns:88px 1fr 20px;
   gap:14px;
-
+  width:100%;
+  padding:12px;
+  text-align:left;
+  background:#fff;
   border:1px solid var(--line);
   border-radius:20px;
-
-  background:#fff;
-
-  text-align:left;
-
   transition:.16s;
 }
 
 .gift-card:hover{
   transform:translateY(-2px);
   border-color:#BED4FF;
-  box-shadow:
-    0 12px 28px rgba(0,102,255,.10);
+  box-shadow:0 12px 28px rgba(0,102,255,.10);
 }
 
 .gift-card.featured{
@@ -291,32 +282,26 @@ h2{
   position:absolute;
   top:-10px;
   left:16px;
-
   padding:5px 9px;
-
-  border-radius:999px;
-
   background:var(--primary);
-  color:#fff;
-
+  color:white;
+  border-radius:999px;
   font-size:10px;
   font-weight:800;
 }
 
 .gift-visual{
   height:94px;
-  overflow:hidden;
   border-radius:16px;
+  overflow:hidden;
 }
 
 .mock-photo{
   width:100%;
   height:100%;
-  padding:9px;
-
   display:grid;
   place-items:center;
-
+  padding:9px;
   text-align:center;
   line-height:1.25;
 }
@@ -327,47 +312,32 @@ h2{
 }
 
 .mock-photo span{
-  color:#0066FF;
   font-size:9px;
+  color:#0066FF;
   font-weight:900;
 }
 
 .mock-photo small{
   margin-top:5px;
-
   color:#6C7683;
-
   font-size:7.5px;
   font-weight:600;
 }
 
+.male-style{
+  background:linear-gradient(135deg,#E5ECF7,#F8FAFD);
+}
+
 .health-check{
-  background:
-    linear-gradient(
-      135deg,
-      #DDF2E9,
-      #F8FCFA
-    );
+  background:linear-gradient(135deg,#DDF2E9,#F8FCFA);
+}
+
+.massage{
+  background:linear-gradient(135deg,#E7F3ED,#FAFCFA);
 }
 
 .life{
-  background:
-    linear-gradient(
-      135deg,
-      #DCEAFF,
-      #F4F8FF
-    );
-}
-
-.outfit-gift-thumb{
-  background:#F3F5F8;
-}
-
-.outfit-gift-thumb img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:top;
+  background:linear-gradient(135deg,#DCEAFF,#F4F8FF);
 }
 
 .gift-copy{
@@ -377,20 +347,15 @@ h2{
 
 .gift-copy .category{
   display:block;
-
   margin-bottom:5px;
-
   color:var(--primary);
-
   font-size:11px;
   font-weight:800;
 }
 
 .gift-copy strong{
   display:block;
-
   margin-bottom:5px;
-
   font-size:16px;
   line-height:1.4;
   letter-spacing:-.25px;
@@ -398,35 +363,28 @@ h2{
 
 .gift-copy > span:last-child{
   display:block;
-
   color:var(--text600);
-
   font-size:12.5px;
   line-height:1.5;
 }
 
 .chevron{
   align-self:center;
-
   color:var(--text500);
-
   font-size:24px;
 }
 
 .micro-copy{
   margin:16px 0 0;
-
   color:var(--text500);
-
   text-align:center;
-
   font-size:12px;
 }
 
 
-/* =====================================================
-  DETAIL
-===================================================== */
+/* ==============================
+   상세페이지 공통
+============================== */
 
 .detail-scroll{
   padding-bottom:84px;
@@ -439,31 +397,15 @@ h2{
 
 .hero{
   padding-top:34px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #F6FAFF 0%,
-      #FFF 100%
-    );
+  background:linear-gradient(180deg,#F6FAFF 0%,#FFF 100%);
 }
 
 .hero-outfit{
-  background:
-    linear-gradient(
-      180deg,
-      #F8FAFD,
-      #fff
-    );
+  background:linear-gradient(180deg,#F8FAFD,#fff);
 }
 
 .hero-care{
-  background:
-    linear-gradient(
-      180deg,
-      #F2FBF7,
-      #fff
-    );
+  background:linear-gradient(180deg,#F2FBF7,#fff);
 }
 
 .section-block{
@@ -478,17 +420,22 @@ h2{
   background:#F7FBF9;
 }
 
+.section-description{
+  margin:10px 0 0;
+  color:var(--text600);
+  font-size:14px;
+  line-height:1.7;
+}
 
-/* =====================================================
-  BENEFIT
-===================================================== */
+
+/* ==============================
+   혜택 카드
+============================== */
 
 .benefit-card{
   margin-top:22px;
   padding:22px;
-
   border-radius:24px;
-
   background:var(--primary);
   color:#fff;
 }
@@ -499,16 +446,13 @@ h2{
 
 .benefit-card > span{
   display:block;
-
   margin-bottom:6px;
-
   font-size:12px;
   opacity:.82;
 }
 
 .benefit-card > strong{
   display:block;
-
   font-size:27px;
   line-height:1.3;
   letter-spacing:-1px;
@@ -516,9 +460,7 @@ h2{
 
 .benefit-card > p{
   margin:9px 0 0;
-
   font-size:11px;
-  line-height:1.6;
   opacity:.82;
 }
 
@@ -526,15 +468,12 @@ h2{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:8px;
-
   margin-top:14px;
 }
 
 .benefit-split div{
   padding:13px;
-
   border-radius:14px;
-
   background:rgba(255,255,255,.13);
 }
 
@@ -550,224 +489,20 @@ h2{
 
 .benefit-split b{
   margin-top:4px;
-
   font-size:14px;
 }
 
 
-/* =====================================================
-  OUTFIT COVER
-===================================================== */
-
-.outfit-cover{
-  position:relative;
-
-  margin-top:24px;
-
-  overflow:hidden;
-
-  border:1px solid var(--line);
-  border-radius:24px;
-
-  background:#F4F6F9;
-
-  box-shadow:
-    0 12px 28px rgba(25,43,74,.08);
-}
-
-.outfit-cover::after{
-  content:"리포트 구성 예시";
-
-  position:absolute;
-  right:12px;
-  bottom:12px;
-
-  padding:6px 9px;
-
-  border-radius:999px;
-
-  background:rgba(17,24,39,.78);
-  color:#fff;
-
-  font-size:9px;
-  font-weight:700;
-}
-
-.outfit-cover img{
-  width:100%;
-  height:auto;
-}
-
-
-/* =====================================================
-  FEATURE
-===================================================== */
-
-.feature-grid{
-  display:grid;
-  gap:10px;
-
-  margin-top:20px;
-}
-
-.feature-grid article{
-  padding:17px;
-
-  border:1px solid var(--line);
-  border-radius:17px;
-
-  background:#fff;
-}
-
-.feature-grid article > span{
-  display:inline-block;
-
-  margin-bottom:8px;
-
-  color:var(--primary);
-
-  font-size:11px;
-  font-weight:900;
-}
-
-.feature-grid.green article > span{
-  color:var(--green700);
-}
-
-.feature-grid strong{
-  display:block;
-
-  font-size:14.5px;
-}
-
-.feature-grid p{
-  margin:5px 0 0;
-
-  color:var(--text600);
-
-  font-size:12.5px;
-  line-height:1.55;
-}
-
-
-/* =====================================================
-  REPORT PREVIEW
-===================================================== */
-
-.report-preview-list{
-  display:grid;
-  gap:16px;
-
-  margin-top:22px;
-}
-
-.report-preview-card{
-  overflow:hidden;
-
-  border:1px solid var(--line);
-  border-radius:20px;
-
-  background:#fff;
-
-  box-shadow:
-    0 5px 18px rgba(25,43,74,.04);
-}
-
-.report-preview-image{
-  position:relative;
-
-  display:block;
-
-  height:310px;
-  overflow:hidden;
-
-  border-bottom:1px solid var(--line);
-
-  background:#F2F4F7;
-}
-
-.report-preview-image::after{
-  content:"이미지 크게 보기";
-
-  position:absolute;
-  right:11px;
-  bottom:11px;
-
-  padding:6px 9px;
-
-  border-radius:999px;
-
-  background:rgba(17,24,39,.72);
-  color:#fff;
-
-  font-size:9px;
-  font-weight:700;
-}
-
-.report-preview-image img{
-  width:100%;
-  height:auto;
-
-  min-height:100%;
-
-  object-fit:cover;
-  object-position:top center;
-}
-
-.report-preview-copy{
-  padding:17px 18px 18px;
-}
-
-.report-preview-copy > span{
-  display:block;
-
-  margin-bottom:5px;
-
-  color:var(--primary);
-
-  font-size:9.5px;
-  font-weight:900;
-  letter-spacing:.08em;
-}
-
-.report-preview-copy strong{
-  display:block;
-
-  font-size:15.5px;
-}
-
-.report-preview-copy p{
-  margin:6px 0 0;
-
-  color:var(--text600);
-
-  font-size:12.5px;
-  line-height:1.6;
-}
-
-.report-note{
-  margin:12px 2px 0;
-
-  color:var(--text500);
-
-  font-size:10.5px;
-  line-height:1.55;
-}
-
-
-/* =====================================================
-  NOTICE
-===================================================== */
+/* ==============================
+   안내 카드
+============================== */
 
 .notice-card{
   display:flex;
   gap:10px;
-
   margin-top:14px;
   padding:15px;
-
   border-radius:16px;
-
   background:#F8FAFC;
 }
 
@@ -777,18 +512,13 @@ h2{
 
 .notice-icon{
   flex:0 0 22px;
-
   width:22px;
   height:22px;
-
   display:grid;
   place-items:center;
-
   border-radius:50%;
-
   background:var(--primary50);
   color:var(--primary);
-
   font-size:12px;
   font-weight:900;
 }
@@ -800,9 +530,7 @@ h2{
 
 .notice-card p{
   margin:0;
-
   color:var(--text700);
-
   font-size:13px;
   line-height:1.6;
 }
@@ -812,14 +540,55 @@ h2{
 }
 
 
-/* =====================================================
-  CHECK LIST
-===================================================== */
+/* ==============================
+   특징 카드
+============================== */
+
+.feature-grid{
+  display:grid;
+  gap:10px;
+  margin-top:20px;
+}
+
+.feature-grid article{
+  padding:17px;
+  border:1px solid var(--line);
+  border-radius:17px;
+  background:#fff;
+}
+
+.feature-grid article > span{
+  display:inline-block;
+  margin-bottom:8px;
+  color:var(--primary);
+  font-size:11px;
+  font-weight:900;
+}
+
+.feature-grid.green article > span{
+  color:var(--green700);
+}
+
+.feature-grid strong{
+  display:block;
+  font-size:14.5px;
+}
+
+.feature-grid p{
+  margin:5px 0 0;
+  color:var(--text600);
+  font-size:12.5px;
+  line-height:1.55;
+}
+
+
+/* ==============================
+   체크 리스트
+============================== */
 
 .check-list{
   display:grid;
   gap:10px;
-
   margin-top:20px;
 }
 
@@ -827,18 +596,14 @@ h2{
   display:grid;
   grid-template-columns:92px 1fr;
   gap:12px;
-
   padding:15px;
-
-  border:1px solid var(--line);
   border-radius:15px;
-
   background:#fff;
+  border:1px solid var(--line);
 }
 
 .check-list span{
   color:var(--text500);
-
   font-size:11.5px;
 }
 
@@ -847,134 +612,34 @@ h2{
   line-height:1.5;
 }
 
-.primary-text{
-  color:var(--primary);
-}
 
-
-/* =====================================================
-  OUTFIT PREPARE
-===================================================== */
-
-.outfit-prepare-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-
-  margin-top:20px;
-}
-
-.outfit-prepare-grid article{
-  min-height:82px;
-  padding:14px;
-
-  border:1px solid var(--line);
-  border-radius:15px;
-
-  background:#fff;
-}
-
-.outfit-prepare-grid span{
-  display:block;
-
-  margin-bottom:7px;
-
-  color:var(--primary);
-
-  font-size:10px;
-  font-weight:900;
-}
-
-.outfit-prepare-grid strong{
-  display:block;
-
-  font-size:12.5px;
-  line-height:1.45;
-}
-
-.outfit-photo-guide{
-  display:flex;
-  gap:11px;
-
-  margin-top:14px;
-  padding:16px;
-
-  border-radius:17px;
-
-  background:#FFF8E8;
-}
-
-.outfit-photo-icon{
-  flex:0 0 22px;
-
-  width:22px;
-  height:22px;
-
-  display:grid;
-  place-items:center;
-
-  border-radius:50%;
-
-  background:#FFE7AD;
-  color:#795619;
-
-  font-size:12px;
-  font-weight:900;
-}
-
-.outfit-photo-guide strong{
-  display:block;
-
-  color:#5D461A;
-
-  font-size:12.5px;
-}
-
-.outfit-photo-guide p{
-  margin:5px 0 0;
-
-  color:#72551D;
-
-  font-size:11.5px;
-  line-height:1.6;
-}
-
-
-/* =====================================================
-  STEPS
-===================================================== */
+/* ==============================
+   진행 단계
+============================== */
 
 .step-list{
   display:grid;
   gap:10px;
-
   margin-top:20px;
 }
 
 .step-card{
   display:flex;
   gap:13px;
-
   padding:16px;
-
   border:1px solid var(--line);
   border-radius:17px;
 }
 
 .step-card > span{
   flex:0 0 28px;
-
   width:28px;
   height:28px;
-
   display:grid;
   place-items:center;
-
   border-radius:50%;
-
   background:var(--primary50);
   color:var(--primary);
-
   font-size:12px;
   font-weight:900;
 }
@@ -990,34 +655,29 @@ h2{
 
 .step-card p{
   margin:4px 0 0;
-
   color:var(--text600);
-
   font-size:12.5px;
   line-height:1.55;
 }
 
 
-/* =====================================================
-  INFO
-===================================================== */
+/* ==============================
+   정보 그리드
+============================== */
 
 .info-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
-
   margin-top:20px;
 }
 
 .info-grid article{
   min-height:95px;
   padding:15px;
-
+  background:#fff;
   border:1px solid var(--line);
   border-radius:16px;
-
-  background:#fff;
 }
 
 .info-grid span,
@@ -1027,49 +687,40 @@ h2{
 
 .info-grid span{
   color:var(--text500);
-
   font-size:11px;
 }
 
 .info-grid strong{
   margin-top:7px;
-
   font-size:15px;
   line-height:1.45;
 }
 
 .footnote{
   margin:10px 0 0;
-
   color:var(--text500);
-
   font-size:10.5px;
   line-height:1.55;
 }
 
 
-/* =====================================================
-  COST
-===================================================== */
+/* ==============================
+   비용
+============================== */
 
 .cost-card{
   margin-top:20px;
-
-  overflow:hidden;
-
   border:1px solid var(--line);
   border-radius:18px;
+  overflow:hidden;
 }
 
 .cost-row{
   display:flex;
   justify-content:space-between;
   gap:18px;
-
   padding:15px;
-
   border-bottom:1px solid var(--line);
-
   font-size:12.5px;
 }
 
@@ -1085,54 +736,106 @@ h2{
   text-align:right;
 }
 
+.primary-text{
+  color:var(--primary);
+}
 
-/* =====================================================
-  ACCORDION
-===================================================== */
+
+/* ==============================
+   타임라인
+============================== */
+
+.timeline{
+  position:relative;
+  display:grid;
+  gap:0;
+  margin:22px 0 0;
+  padding:0;
+  list-style:none;
+}
+
+.timeline li{
+  position:relative;
+  padding:0 0 25px 30px;
+}
+
+.timeline li:before{
+  content:"";
+  position:absolute;
+  left:2px;
+  top:7px;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:var(--primary);
+}
+
+.timeline li:after{
+  content:"";
+  position:absolute;
+  left:6px;
+  top:17px;
+  width:1px;
+  height:calc(100% - 8px);
+  background:var(--primary100);
+}
+
+.timeline li:last-child:after{
+  display:none;
+}
+
+.timeline strong,
+.timeline span{
+  display:block;
+}
+
+.timeline strong{
+  font-size:14.5px;
+}
+
+.timeline span{
+  margin-top:4px;
+  color:var(--text600);
+  font-size:12.5px;
+  line-height:1.55;
+}
+
+
+/* ==============================
+   아코디언
+============================== */
 
 .accordion{
   margin-top:18px;
-
   border-top:1px solid var(--line);
 }
 
 .accordion-item{
   width:100%;
-  padding:18px 0;
-
   display:flex;
   justify-content:space-between;
   gap:15px;
-
+  padding:18px 0;
   border:0;
   border-bottom:1px solid var(--line);
-
   background:transparent;
-  color:var(--text900);
-
   text-align:left;
-
+  color:var(--text900);
   font-size:13.5px;
   font-weight:700;
 }
 
 .accordion-item b{
-  flex:0 0 auto;
-
   color:var(--text500);
 }
 
 .accordion-panel{
   display:none;
-
   padding:0 0 17px;
-
-  border-bottom:1px solid var(--line);
-
   color:var(--text600);
-
   font-size:12.5px;
   line-height:1.65;
+  border-bottom:1px solid var(--line);
 }
 
 .accordion-panel.is-open{
@@ -1144,23 +847,19 @@ h2{
 }
 
 
-/* =====================================================
-  PLACEHOLDER IMAGE
-===================================================== */
+/* ==============================
+   기존 이미지 요청 슬롯
+============================== */
 
 .image-request{
   margin-top:20px;
   padding:18px;
-
   min-height:160px;
-
   display:flex;
   flex-direction:column;
   justify-content:center;
-
   border:1.5px dashed #8FB5F5;
   border-radius:20px;
-
   background:
     linear-gradient(
       135deg,
@@ -1178,12 +877,18 @@ h2{
 
 .image-request.green{
   border-color:#8CCEB7;
-
   background:
     linear-gradient(
       135deg,
       rgba(21,122,90,.03),
       rgba(21,122,90,.075)
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(21,122,90,.02) 10px,
+      rgba(21,122,90,.02) 20px
     );
 }
 
@@ -1195,21 +900,16 @@ h2{
   display:flex;
   justify-content:space-between;
   gap:10px;
-
   margin-bottom:20px;
 }
 
 .image-request-top span{
   display:inline-flex;
   width:max-content;
-
   padding:5px 8px;
-
   border-radius:999px;
-
   background:#0066FF;
   color:#fff;
-
   font-size:9.5px;
   font-weight:800;
 }
@@ -1220,7 +920,6 @@ h2{
 
 .image-request-top b{
   color:#82A5D9;
-
   font-size:10px;
   letter-spacing:.12em;
 }
@@ -1236,64 +935,93 @@ h2{
 
 .image-request > p{
   margin:7px 0 0;
-
   color:#5E6670;
-
   font-size:11.5px;
   line-height:1.65;
 }
 
+.image-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:14px;
+}
 
-/* =====================================================
-  STICKY
-===================================================== */
+.image-meta span{
+  padding:5px 8px;
+  border:1px solid #CFE0FA;
+  border-radius:8px;
+  background:#fff;
+  color:#55739C;
+  font-size:9.5px;
+}
+
+.green .image-meta span{
+  border-color:#CAE8DD;
+  color:#4D7F6E;
+}
+
+.image-pair{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:18px;
+}
+
+.image-request.compact{
+  min-height:170px;
+  margin-top:0;
+  padding:14px;
+}
+
+.image-request.compact .image-request-top{
+  margin-bottom:14px;
+}
+
+.image-request.compact > strong{
+  font-size:13px;
+}
+
+.image-request.compact > p{
+  font-size:10.5px;
+}
+
+
+/* ==============================
+   하단 CTA
+============================== */
 
 .sticky-action{
   position:sticky;
   bottom:0;
   z-index:25;
-
   width:100%;
   padding:10px 20px 16px;
-
-  border-top:1px solid var(--line);
-
   background:rgba(255,255,255,.96);
   backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);
 }
 
 .sticky-action p{
   margin:0 0 8px;
-
   color:var(--text500);
-
   text-align:center;
-
   font-size:10.5px;
 }
-
-
-/* =====================================================
-  BUTTON
-===================================================== */
 
 .primary-button,
 .secondary-button{
   width:100%;
   height:54px;
-
-  border:0;
   border-radius:16px;
-
   font-weight:800;
+  border:0;
 }
 
 .primary-button{
   background:var(--primary);
   color:#fff;
-
-  box-shadow:
-    0 8px 20px rgba(0,102,255,.22);
+  box-shadow:0 8px 20px rgba(0,102,255,.22);
 }
 
 .primary-button:hover{
@@ -1302,33 +1030,14 @@ h2{
 
 .secondary-button{
   margin-top:26px;
-
   background:var(--primary50);
   color:var(--primary);
 }
 
-.external-apply-button{
-  margin-top:28px;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  text-decoration:none;
-}
-
-.external-apply-button[hidden]{
-  display:none;
-}
-
-.external-apply-button + .secondary-button{
-  margin-top:10px;
-}
-
-
-/* =====================================================
-  FORMS
-===================================================== */
+/* ==============================
+   신청 폼
+============================== */
 
 .form-content,
 .survey-content{
@@ -1338,38 +1047,28 @@ h2{
 .progress{
   height:4px;
   margin-bottom:28px;
-
-  overflow:hidden;
-
-  border-radius:99px;
-
   background:#EDF0F4;
+  border-radius:99px;
+  overflow:hidden;
 }
 
 .progress span{
   display:block;
-
   height:100%;
-
-  border-radius:inherit;
-
   background:var(--primary);
+  border-radius:inherit;
 }
 
 .form-stack{
   display:grid;
   gap:16px;
-
   margin-top:28px;
 }
 
 .form-stack label > span{
   display:block;
-
   margin-bottom:7px;
-
   color:var(--text700);
-
   font-size:12px;
   font-weight:700;
 }
@@ -1378,24 +1077,18 @@ h2{
 .form-stack select{
   width:100%;
   height:52px;
-
   padding:0 14px;
-
   border:1px solid #D9DEE6;
   border-radius:14px;
-
   outline:none;
-
-  background:#fff;
   color:var(--text900);
+  background:#fff;
 }
 
 .form-stack input:focus,
 .form-stack select:focus{
   border-color:var(--primary);
-
-  box-shadow:
-    0 0 0 3px var(--primary50);
+  box-shadow:0 0 0 3px var(--primary50);
 }
 
 .conditional-field{
@@ -1406,95 +1099,50 @@ h2{
   display:block;
 }
 
-.outfit-next-guide{
-  padding:15px;
-
-  border:1px solid #CFE0FA;
-  border-radius:15px;
-
-  background:#F8FBFF;
-}
-
-.outfit-next-guide strong{
-  display:block;
-
-  color:var(--text900);
-
-  font-size:12.5px;
-  line-height:1.5;
-}
-
-.outfit-next-guide p{
-  margin:5px 0 0;
-
-  color:var(--text600);
-
-  font-size:11.5px;
-  line-height:1.6;
-}
-
-
-/* =====================================================
-  INLINE NOTICE
-===================================================== */
-
 .inline-notice{
   display:flex;
   gap:10px;
-
   margin-top:20px;
   padding:14px;
-
   border-radius:15px;
-
   background:var(--primary50);
 }
 
 .inline-notice > span{
   flex:0 0 20px;
-
   width:20px;
   height:20px;
-
   display:grid;
   place-items:center;
-
   border-radius:50%;
-
   background:var(--primary);
   color:#fff;
-
   font-size:11px;
   font-weight:900;
 }
 
 .inline-notice p{
   margin:0;
-
   color:#3F5778;
-
   font-size:11.5px;
   line-height:1.6;
 }
 
 
-/* =====================================================
-  SURVEY
-===================================================== */
+/* ==============================
+   설문
+============================== */
 
 .survey-form{
   display:grid;
   gap:16px;
-
   margin-top:28px;
 }
 
 .question-card{
   position:relative;
-
   margin:0;
   padding:17px;
-
   border:1px solid var(--line);
   border-radius:18px;
 }
@@ -1502,9 +1150,7 @@ h2{
 .question-card legend{
   width:100%;
   padding:0;
-
   color:var(--text900);
-
   font-size:14px;
   line-height:1.55;
   font-weight:800;
@@ -1512,27 +1158,21 @@ h2{
 
 .question-card legend > span{
   margin-right:5px;
-
   color:var(--primary);
 }
 
 .important-question{
   border-color:#BFD5FF;
-
   background:#FBFDFF;
 }
 
 .question-tag{
   display:inline-block;
-
   margin:-2px 0 8px;
   padding:4px 7px;
-
-  border-radius:999px;
-
   background:var(--primary50);
   color:var(--primary);
-
+  border-radius:999px;
   font-size:9.5px;
   font-weight:800;
 }
@@ -1541,46 +1181,38 @@ h2{
   display:flex;
   align-items:flex-start;
   gap:10px;
-
   margin-top:10px;
   padding:12px;
-
   border:1px solid var(--line);
   border-radius:13px;
-
   cursor:pointer;
 }
 
 .choice:has(input:checked){
   border-color:var(--primary);
-
   background:var(--primary50);
 }
 
 .choice input{
   margin-top:2px;
-
   accent-color:var(--primary);
 }
 
 .choice span{
   color:var(--text700);
-
   font-size:12.5px;
   line-height:1.5;
 }
 
 
-/* =====================================================
-  CONSENT
-===================================================== */
+/* ==============================
+   개인정보 동의
+============================== */
 
 .consent-card{
   margin-top:20px;
   padding:16px;
-
   border-radius:16px;
-
   background:var(--surface);
 }
 
@@ -1592,41 +1224,33 @@ h2{
 
 .consent-all input{
   margin-top:3px;
-
   accent-color:var(--primary);
 }
 
 .consent-all span{
   color:var(--text600);
-
   font-size:11.5px;
   line-height:1.6;
 }
 
 .consent-all strong{
   color:var(--text900);
-
   font-size:12.5px;
 }
 
 .text-button{
   margin:10px 0 0 26px;
   padding:0;
-
   border:0;
-
   background:transparent;
   color:var(--text600);
-
   font-size:11px;
   text-decoration:underline;
 }
 
 .final-reminder{
   padding:16px;
-
   border-radius:16px;
-
   background:var(--warning);
   color:var(--warningText);
 }
@@ -1637,41 +1261,32 @@ h2{
 
 .final-reminder p{
   margin:5px 0 0;
-
   font-size:11.5px;
   line-height:1.6;
 }
 
 
-/* =====================================================
-  COMPLETE
-===================================================== */
+/* ==============================
+   완료
+============================== */
 
 .complete-content{
   padding-top:48px;
-
   text-align:center;
 }
 
 .complete-icon{
   width:58px;
   height:58px;
-
   margin:0 auto 22px;
-
   display:grid;
   place-items:center;
-
   border-radius:50%;
-
   background:var(--primary);
   color:#fff;
-
   font-size:25px;
   font-weight:900;
-
-  box-shadow:
-    0 12px 24px rgba(0,102,255,.22);
+  box-shadow:0 12px 24px rgba(0,102,255,.22);
 }
 
 .complete-content .lead{
@@ -1681,32 +1296,25 @@ h2{
 .complete-notice{
   margin-top:24px;
   padding:18px;
-
-  border-radius:18px;
-
-  background:var(--primary50);
-
   text-align:left;
+  border-radius:18px;
+  background:var(--primary50);
 }
 
 .complete-notice strong{
   color:var(--primary);
-
   font-size:14px;
 }
 
 .complete-notice p{
   margin:6px 0 0;
-
   color:var(--text700);
-
   font-size:12.5px;
   line-height:1.6;
 }
 
 .next-section{
   margin-top:34px;
-
   text-align:left;
 }
 
@@ -1717,7 +1325,6 @@ h2{
 .mini-flow{
   display:grid;
   gap:15px;
-
   margin-top:17px;
 }
 
@@ -1728,18 +1335,13 @@ h2{
 
 .mini-flow article > span{
   flex:0 0 28px;
-
   width:28px;
   height:28px;
-
   display:grid;
   place-items:center;
-
   border-radius:50%;
-
   background:var(--primary50);
   color:var(--primary);
-
   font-size:12px;
   font-weight:900;
 }
@@ -1750,21 +1352,17 @@ h2{
 
 .mini-flow p{
   margin:3px 0 0;
-
   color:var(--text600);
-
   font-size:11.5px;
-  line-height:1.55;
 }
 
 
-/* =====================================================
-  MODAL
-===================================================== */
+/* ==============================
+   모달
+============================== */
 
 .modal{
   display:none;
-
   position:fixed;
   inset:0;
   z-index:50;
@@ -1777,7 +1375,6 @@ h2{
 .modal-backdrop{
   position:absolute;
   inset:0;
-
   background:rgba(17,24,39,.45);
 }
 
@@ -1785,28 +1382,19 @@ h2{
   position:absolute;
   left:50%;
   bottom:0;
-
   width:min(100%,430px);
   padding:12px 20px 24px;
-
   transform:translateX(-50%);
-
-  border-radius:24px 24px 0 0;
-
   background:#fff;
-
-  box-shadow:
-    0 -18px 50px rgba(17,24,39,.18);
+  border-radius:24px 24px 0 0;
+  box-shadow:0 -18px 50px rgba(17,24,39,.18);
 }
 
 .modal-handle{
   width:38px;
   height:4px;
-
   margin:0 auto 12px;
-
   border-radius:99px;
-
   background:#D7DCE3;
 }
 
@@ -1828,16 +1416,13 @@ h2{
   display:grid;
   grid-template-columns:90px 1fr;
   gap:12px;
-
   padding:11px 0;
-
   border-bottom:1px solid var(--line);
 }
 
 .modal dt,
 .modal dd{
   margin:0;
-
   font-size:11.5px;
   line-height:1.55;
 }
@@ -1852,52 +1437,270 @@ h2{
 
 .modal-footnote{
   margin:14px 0 16px;
-
   color:var(--text500);
-
   font-size:10px;
   line-height:1.55;
 }
 
 
-/* =====================================================
-  TOAST
-===================================================== */
+/* ==============================
+   토스트
+============================== */
 
 .toast{
   position:fixed;
   left:50%;
   bottom:28px;
   z-index:100;
-
   max-width:calc(100vw - 40px);
   padding:11px 15px;
-
   transform:translate(-50%,15px);
-
   opacity:0;
   pointer-events:none;
-
   border-radius:12px;
-
   background:rgba(17,24,39,.92);
   color:#fff;
-
   font-size:12px;
-
   transition:.18s;
 }
 
 .toast.is-show{
   opacity:1;
-
   transform:translate(-50%,0);
 }
 
 
 /* =====================================================
-  MOBILE
+   아웃핏코드 신규 상세페이지
 ===================================================== */
+
+
+/* 기프트 카드 썸네일 */
+
+.outfit-gift-thumb{
+  background:#F3F5F8;
+}
+
+.outfit-gift-thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:top center;
+}
+
+
+/* 리포트 표지 */
+
+.outfit-cover{
+  position:relative;
+  margin-top:22px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:#F3F5F8;
+  box-shadow:0 10px 28px rgba(25,43,74,.08);
+}
+
+.outfit-cover img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+
+/* 리포트 미리보기 */
+
+.report-preview-list{
+  display:grid;
+  gap:14px;
+  margin-top:20px;
+}
+
+.report-preview-card{
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:19px;
+  background:#fff;
+}
+
+.report-preview-image{
+  position:relative;
+  display:block;
+  height:310px;
+  overflow:hidden;
+  background:#EEF1F5;
+  border-bottom:1px solid var(--line);
+}
+
+.report-preview-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:top center;
+}
+
+.report-preview-image::after{
+  content:"크게 보기";
+  position:absolute;
+  right:10px;
+  bottom:10px;
+  padding:5px 8px;
+  border-radius:999px;
+  background:rgba(17,24,39,.72);
+  color:#fff;
+  font-size:9px;
+  font-weight:700;
+}
+
+.report-preview-copy{
+  padding:16px 17px 18px;
+}
+
+.report-preview-copy > span{
+  display:block;
+  margin-bottom:5px;
+  color:var(--primary);
+  font-size:9.5px;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+
+.report-preview-copy strong{
+  display:block;
+  font-size:15px;
+}
+
+.report-preview-copy p{
+  margin:6px 0 0;
+  color:var(--text600);
+  font-size:12.5px;
+  line-height:1.6;
+}
+
+.report-note{
+  margin:11px 1px 0;
+  color:var(--text500);
+  font-size:10.5px;
+  line-height:1.55;
+}
+
+
+/* 준비 정보 */
+
+.outfit-prepare-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:20px;
+}
+
+.outfit-prepare-grid article{
+  min-height:80px;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:15px;
+  background:#fff;
+}
+
+.outfit-prepare-grid span{
+  display:block;
+  margin-bottom:7px;
+  color:var(--primary);
+  font-size:10px;
+  font-weight:900;
+}
+
+.outfit-prepare-grid strong{
+  display:block;
+  font-size:12.5px;
+  line-height:1.45;
+}
+
+
+/* 사진 촬영 가이드 */
+
+.outfit-photo-guide{
+  display:flex;
+  gap:11px;
+  margin-top:14px;
+  padding:16px;
+  border-radius:17px;
+  background:var(--warning);
+}
+
+.outfit-photo-icon{
+  flex:0 0 22px;
+  width:22px;
+  height:22px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#FFE8AF;
+  color:#72551D;
+  font-size:12px;
+  font-weight:900;
+}
+
+.outfit-photo-guide strong{
+  display:block;
+  color:#5C451A;
+  font-size:12.5px;
+}
+
+.outfit-photo-guide p{
+  margin:5px 0 0;
+  color:var(--warningText);
+  font-size:11.5px;
+  line-height:1.6;
+}
+
+
+/* 시놀 신청 → 아웃핏코드 폼 안내 */
+
+.outfit-next-guide{
+  padding:15px;
+  border:1px solid #CFE0FA;
+  border-radius:15px;
+  background:#F8FBFF;
+}
+
+.outfit-next-guide strong{
+  display:block;
+  color:var(--text900);
+  font-size:12.5px;
+  line-height:1.5;
+}
+
+.outfit-next-guide p{
+  margin:5px 0 0;
+  color:var(--text600);
+  font-size:11.5px;
+  line-height:1.6;
+}
+
+
+/* 외부 신청서 버튼 */
+
+.external-apply-button{
+  margin-top:28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+}
+
+.external-apply-button[hidden]{
+  display:none;
+}
+
+.external-apply-button + .secondary-button{
+  margin-top:10px;
+}
+
+
+/* ==============================
+   모바일
+============================== */
 
 @media(max-width:460px){
 
@@ -1914,9 +1717,7 @@ h2{
   .app-shell{
     width:100%;
     min-height:calc(100vh - 34px);
-
     margin:0;
-
     box-shadow:none;
   }
 
